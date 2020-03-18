@@ -15,3 +15,7 @@
 
 ## Introdução a NN
 https://raphaelmcobe.github.io/dataSanJose2019_nn_presentation/#/
+
+## TensorFlow
+https://www.datacamp.com/community/tutorials/tensorflow-tutorial
+https://mlfromscratch.com/tensorflow-2/#/
