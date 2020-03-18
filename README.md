@@ -12,3 +12,6 @@
 * docker image push silviostanzani/bulletinboard:1.0
   
 * docker image push silviostanzani/bulletinboard:1.0
+
+## Introdução a NN
+https://raphaelmcobe.github.io/dataSanJose2019_nn_presentation/#/
