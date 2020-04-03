@@ -1,3 +1,13 @@
+## Docker montando um conteiner a partir de uma imagem de base
+
+* A criação de uma imagem docker é feita por meio de um arquivo chamado dockerfile
+
+* A seguir mostramos um exemplo de como criar um conteiner a partir de uma imagem com tensorflow 
+
+```
+mkdir ˜/dockerimage
+```
+
 # Docker comandos
 * docker image build -t bulletinboard:1.0 .
 
