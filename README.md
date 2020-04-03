@@ -58,6 +58,16 @@ cd node-bulletin-board/bulletin-board-app
 
 * Conteúdo do dockerfile descritor da imagem
 
+* FROM utilize uma imagem pré-existente (criada pelo grupo que mantém o node.js)
+
+* WORKDIR especifica que todas as ações subseqüentes devem ser executadas no diretório /usr/src/ app no sistema de arquivos do conteiner (nunca no sistema de arquivos do host).
+
+* COPY copia o arquivo package.json do host para o local atual (.) Na sua imagem (neste caso, para /usr/src/app/package.json)
+
+* RUN Execute o comando npm install dentro do seu sistema de arquivos de imagem (utiliza o package.json instalar dependências)
+
+* COPY o restante do código-fonte do host para o sistema de arquivos de imagem.
+
 ```
 FROM node:current-slim
 
@@ -70,6 +80,8 @@ CMD [ "npm", "start" ]
 
 COPY . .
 ```
+
+
 
 * Montando um conteiner a partir da descrição
 ```
