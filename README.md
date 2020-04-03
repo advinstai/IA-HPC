@@ -40,7 +40,7 @@ docker image ls
 ## Mostrando conteineres que foram iniciadas nesse computador
 
 ```
-sudo docker ps --all
+docker ps --all
 ```
 
 ## Montando um conteiner docker 
@@ -81,21 +81,22 @@ docker build --tag bulletinboard:1.0 .
 docker run --publish 8000:8080 --detach --name bb bulletinboard:1.0
 ```
 
+* O conteiner é iniciado de modo asíncrono liberado o terminal
+* O intervalo de portas entre 8000 e 8080 são exportadas para serem acessíveis a partir do host do conteiner
 
-## 
-# Docker comandos
-* docker image build -t bulletinboard:1.0 .
+* Terminando a execução do conteiner
+```
+docker rm --force bb
+```
 
-* docker container run --publish 8000:8080 --detach --name bb bulletinboard:1.0
-  
-* docker container rm --force bb
-  
-* docker image tag bulletinboard:1.0 silviostanzani/bulletinboard:1.0
-  
-* docker login
-  
-* docker image push silviostanzani/bulletinboard:1.0
-  
-* docker image push silviostanzani/bulletinboard:1.0
+* Criando uma versão nova de imagem com tag
 
-Fonte: https://docs.docker.com/get-started/part2/
+``` 
+docker image tag bulletinboard:1.0 silviostanzani/bulletinboard:2.0
+```
+* armazenando imagem docker no espaço público do usuário
+
+```  
+docker image push silviostanzani/bulletinboard:2.0
+```
+
