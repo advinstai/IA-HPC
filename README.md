@@ -1,6 +1,7 @@
 # Docker
 
-## Testando instalação docker
+## Testando instalação do docker
+
 ```
 docker run hello-world
 ```
@@ -30,17 +31,58 @@ For more examples and ideas, visit:
  https://docs.docker.com/get-started/
 ```
 
-
-## Docker montando um conteiner a partir de uma imagem de base
-
-* A criação de uma imagem docker é feita por meio de um arquivo chamado dockerfile
-
-* A seguir mostramos um exemplo de como criar um conteiner a partir de uma imagem com tensorflow 
+## Listando conteineres presentes no computador
 
 ```
-mkdir ˜/dockerimage
+docker image ls
 ```
 
+## Mostrando conteineres que foram iniciadas nesse computador
+
+```
+sudo docker ps --all
+```
+
+## Montando um conteiner docker 
+
+Um container é montado com base em um arquivo chamado dockerfile. A seguir replicamos uma fragmento do tutorial docker (https://docs.docker.com/get-started/part2/) passo a passo.
+
+* Um conteiner é definido com base em uma imagem vazia, ou a partir de uma imagem existente
+* A forma mais eficiente de manter um dockerfile é versionando no github
+* O primeiro passo para criar um novo conteiner docker é obtendo a descrição e os arquivos necessários para criar o conteiner
+
+```
+git clone https://github.com/dockersamples/node-bulletin-board
+cd node-bulletin-board/bulletin-board-app
+```
+
+* Conteúdo do dockerfile descritor da imagem
+
+```
+FROM node:current-slim
+
+WORKDIR /usr/src/app
+COPY package.json .
+RUN npm install
+
+EXPOSE 8080
+CMD [ "npm", "start" ]
+
+COPY . .
+```
+
+* Montando um conteiner a partir da descrição
+```
+docker build --tag bulletinboard:1.0 .
+```
+
+* Iniciando o conteiner
+```
+docker run --publish 8000:8080 --detach --name bb bulletinboard:1.0
+```
+
+
+## 
 # Docker comandos
 * docker image build -t bulletinboard:1.0 .
 
@@ -56,4 +98,4 @@ mkdir ˜/dockerimage
   
 * docker image push silviostanzani/bulletinboard:1.0
 
-
+Fonte: https://docs.docker.com/get-started/part2/
