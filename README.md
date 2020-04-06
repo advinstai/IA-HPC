@@ -112,3 +112,11 @@ docker image tag bulletinboard:1.0 silviostanzani/bulletinboard:2.0
 docker image push silviostanzani/bulletinboard:2.0
 ```
 
+# Exercício
+* criar conta no docker hub
+* instalar docker
+* executar imagem bulletinboard
+```
+docker pull silviostanzani/bulletinboard:1.9
+docker run silviostanzani/bulletinboard:1.9
+```
