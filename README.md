@@ -118,5 +118,5 @@ docker image push silviostanzani/bulletinboard:2.0
 * executar imagem bulletinboard
 ```
 docker pull silviostanzani/bulletinboard:1.9
-docker run silviostanzani/bulletinboard:1.9
+docker run --publish 8000:8080 silviostanzani/bulletinboard:1.9
 ```
