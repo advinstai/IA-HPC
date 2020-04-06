@@ -117,6 +117,8 @@ docker image push silviostanzani/bulletinboard:2.0
 * instalar docker
 * executar imagem bulletinboard
 ```
+docker login
 docker pull silviostanzani/bulletinboard:1.9
 docker run --publish 8000:8080 silviostanzani/bulletinboard:1.9
+acessar o link localhost:8000 no navegador
 ```
