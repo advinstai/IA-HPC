@@ -1,6 +1,6 @@
 # HPC
 
-* Verificando configuraçãco
+* Verificando configuração
 ```
 lscpu
 ```
