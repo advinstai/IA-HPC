@@ -1,3 +1,30 @@
+# HPC
+
+* Verificando configuraçãco
+```
+lscpu
+```
+
+* monitor de atividade CPU
+
+```
+htop
+```
+
+* monitor de atividade GPU
+
+```
+nvidia-smi
+```
+
+## Carregando container tensorflow
+
+* Container com jupyter gpu tensorflow
+* Configurando para GPU/CPU
+
+
+## Ambiente google colab
+
 # Docker
 
 ## Testando instalação do docker
