@@ -1,6 +1,8 @@
 # HPC
 
-* Verificando configuração
+### Comandos importantes para monitorar recursos computacionais:
+
+* Verificando arquitetura computacional
 ```
 lscpu
 ```
@@ -17,13 +19,24 @@ htop
 nvidia-smi
 ```
 
-## Carregando container tensorflow
+### Carregando container tensorflow
 
-* Container com jupyter gpu tensorflow
-* Configurando para GPU/CPU
+* Container com tensorflow para GPU
 
+* Container com tensorflow para CPU
 
-## Ambiente google colab
+* Container com tensorflow e Jupyter
+
+* Redirecionando porta do Container para porta do host
+
+* Mapeando usuário do host para Container
+
+* Configurando conteiner para executar um comando e terminar a execução
+
+* Montando Container para treinar Modelo
+
+* Montando Container para realizar inferencias
+
 
 # Docker
 
