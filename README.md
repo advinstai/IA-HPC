@@ -63,6 +63,10 @@ docker run --gpus all -v /home/silvio/git:/tf -p 8888:8888 --user $(id -u):$(id 
 
 * Configurando conteiner para executar um comando e terminar a execução
 
+```
+docker run -v /home/silvio/git:/tf -it --rm --runtime=nvidia tensorflow/tensorflow:latest-gpu python /tf/tf.py
+```
+
 * Montando Container para treinar Modelo
 
 * Montando Container para realizar inferencias
