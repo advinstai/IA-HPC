@@ -25,13 +25,17 @@ nvidia-smi
 
     * -it : inicia um terminal para acessar o Container
     * --rm : remove o container após sair do Container
-    
+
+```    
 docker run -it --rm tensorflow/tensorflow bash
+```
 
 * Container com tensorflow para GPU
 
+    * --runtime=nvidia : utilizar o runtime nvidia para mapear o driver nvidia para o container
+```
 sudo docker run -it --rm --runtime=nvidia tensorflow/tensorflow:latest-gpu bash
-
+```
 
 * Código para verificar presença da GPU
 
@@ -46,10 +50,11 @@ print(('\nYour devices that are available:\n{0}').format(
     [device.name for device in tf.config.experimental.list_physical_devices()]
 ))
 ```
+
 * Container com tensorflow e Jupyter
 
-    * -v $(realpath ~/notebooks):/tf/notebooks 
-    * -p 8888:8888 : mapeia porta do container para porta do host
+    * -v ~/notebooks:/tf/notebooks : mapeia o diretório local (~/notebooks) para o diretório do container (/tf/notebooks)  
+    * -p 8889:8888 : mapeia porta do container (8889) para porta do host (8888)
       
 * Redirecionando porta do Container para porta do host
 
