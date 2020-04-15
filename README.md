@@ -53,7 +53,7 @@ print(('\nYour devices that are available:\n{0}').format(
 
 * Container com tensorflow e Jupyter
 
-    * -v ~/notebooks:/tf/notebooks : mapeia o diretório local (~/notebooks) para o diretório do container (/tf/notebooks)  
+    * -v /notebooks:/tf/notebooks : mapeia o diretório local (~/notebooks) para o diretório do container (/tf/notebooks)  
     * -p 8889:8888 : mapeia porta do container (8889) para porta do host (8888)
       
 * Redirecionando porta do Container para porta do host
