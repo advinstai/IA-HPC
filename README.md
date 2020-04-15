@@ -57,11 +57,9 @@ print(('\nYour devices that are available:\n{0}').format(
 docker run --gpus all -v /home/silvio/git:/tf -p 8888:8888 --user $(id -u):$(id -g) tensorflow/tensorflow:nightly-gpu-py3-jupyter
 ```
 
-    * -v /notebooks:/tf/notebooks : mapeia o diretório local (~/notebooks) para o diretório do container (/tf/notebooks)  
-    * -p 8889:8888 : mapeia porta do container (8889) para porta do host (8888)
+   * -v /notebooks:/tf/notebooks : mapeia o diretório local (~/notebooks) para o diretório do container (/tf/notebooks)  
+   * -p 8889:8888 : mapeia porta do container (8889) para porta do host (8888)
       
-* Redirecionando porta do Container para porta do host
-
 * Mapeando usuário do host para Container
 --user $(id -u):$(id -g)
 
