@@ -21,15 +21,31 @@ nvidia-smi
 
 ### Carregando container tensorflow
 
-* Container com tensorflow para GPU
+* Container com tensorflow para CPU
 
     * -it : inicia um terminal para acessar o Container
     * --rm : remove o container após sair do Container
     
 docker run -it --rm tensorflow/tensorflow bash
 
-* Container com tensorflow para CPU
+* Container com tensorflow para GPU
 
+sudo docker run -it --rm --runtime=nvidia tensorflow/tensorflow:latest-gpu bash
+
+
+* Código para verificar presença da GPU
+
+```
+print(tf.config.list_physical_devices('GPU'))
+
+print(('Is your GPU available for use?\n{0}').format(
+    'Yes, your GPU is available: True' if tf.test.is_gpu_available() == True else 'No, your GPU is NOT available: False'
+))
+
+print(('\nYour devices that are available:\n{0}').format(
+    [device.name for device in tf.config.experimental.list_physical_devices()]
+))
+```
 * Container com tensorflow e Jupyter
 
     * -v $(realpath ~/notebooks):/tf/notebooks 
