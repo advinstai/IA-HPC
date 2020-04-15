@@ -59,9 +59,7 @@ docker run --gpus all -v /home/silvio/git:/tf -p 8888:8888 --user $(id -u):$(id 
 
    * -v /notebooks:/tf/notebooks : mapeia o diretório local (~/notebooks) para o diretório do container (/tf/notebooks)  
    * -p 8889:8888 : mapeia porta do container (8889) para porta do host (8888)
-      
-* Mapeando usuário do host para Container
---user $(id -u):$(id -g)
+   * Mapeando usuário do host para Container --user $(id -u):$(id -g)
 
 * Configurando conteiner para executar um comando e terminar a execução
 
