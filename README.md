@@ -61,7 +61,7 @@ docker run --gpus all -v /home/silvio/git:/tf -p 8888:8888 --user $(id -u):$(id 
    * -p 8889:8888 : mapeia porta do container (8889) para porta do host (8888)
    * Mapeando usuário do host para Container --user $(id -u):$(id -g)
 
-* Configurando conteiner para executar um comando e terminar a execução
+### Configurando conteiner para executar um comando e terminar a execução
 
 ```
 docker run -v /home/silvio/git:/tf -it --rm --runtime=nvidia tensorflow/tensorflow:latest-gpu python /tf/tf.py
