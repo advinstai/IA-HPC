@@ -23,10 +23,18 @@ nvidia-smi
 
 * Container com tensorflow para GPU
 
+    * -it : inicia um terminal para acessar o Container
+    * --rm : remove o container após sair do Container
+    
+docker run -it --rm tensorflow/tensorflow bash
+
 * Container com tensorflow para CPU
 
 * Container com tensorflow e Jupyter
 
+    * -v $(realpath ~/notebooks):/tf/notebooks 
+    * -p 8888:8888 : mapeia porta do container para porta do host
+      
 * Redirecionando porta do Container para porta do host
 
 * Mapeando usuário do host para Container
